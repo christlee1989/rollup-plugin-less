@@ -9,3 +9,4 @@ test
 .npmignore
 npm-debug.log
 rollup.config.js
+.idea
