@@ -14,9 +14,9 @@ let renderSync = (code, option) => {
     })
 };
 
-let fileCount = 0;
-
 export default function plugin (options = {}) {
+  let fileCount = 0;
+
   options.insert = options.insert || false;
   const filter = createFilter(options.include || [ '**/*.less', '**/*.css' ], options.exclude || 'node_modules/**');
 
@@ -42,14 +42,15 @@ export default function plugin (options = {}) {
 
         let css = await renderSync(code, options.option);
 
-        if(options.output&&isFunc(options.output)){
+        if(options.output && isFunc(options.output)){
           css = await options.output(css, id);
         }
 
-        if (options.output&&isString(options.output)) {
+        if (options.output && isString(options.output)) {
           if(fileCount == 1){
             //clean the output file
             fs.removeSync(options.output);
+            fs.ensureFileSync(options.output)
           }
           fs.appendFileSync(options.output, css);
         }
