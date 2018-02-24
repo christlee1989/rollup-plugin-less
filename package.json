@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-less-loader",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a rollup plugin for less files",
   "main": "dist/rollup-plugin-less-loader.js",
   "jsnext:main": "dist/rollup-plugin-less-loader.mjs",
