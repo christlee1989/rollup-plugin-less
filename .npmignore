@@ -1,2 +1,11 @@
 .DS_Store
 node_modules
+src
+test
+.babelrc
+.editorconfig
+.eslintrc
+.gitignore
+.npmignore
+npm-debug.log
+rollup.config.js

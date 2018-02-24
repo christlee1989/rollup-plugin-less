@@ -1,7 +1,11 @@
+## 说明
+ 
+### 解决原版在多入口打包CSS的情况下的BUG
+
 ## Install
 
 ```node
-npm install rollup-plugin-less --save
+npm install rollup-plugin-less-loader --save
 ```
 
 ## usage
@@ -13,7 +17,7 @@ import './test.less';
 
 ```js
 import { rollup } from 'rollup';
-import less from 'rollup-plugin-less';
+import less from 'rollup-plugin-less-loader';
 
 rollup({
     entry: 'main.js',
